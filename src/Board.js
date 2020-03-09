@@ -5,7 +5,7 @@ const Board = ({sounds, playSound}) =>{
       const soundList = sounds.map(sound =>{
         return(
           <div className="board" key={sound.id}>
-            <div onClick={() => playSound(sound.id)}>Sound name: {sound.soundName}</div>
+            <button onClick={() => playSound(sound.id)}>Sound name: {sound.soundName}</button>
          </div>
         )
       })
