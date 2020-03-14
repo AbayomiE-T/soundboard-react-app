@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Profiles from './components/Profiles';
-import Board from './Board';
 import StarWars from './components/StarWars';
 import Memes from './components/Memes';
 import Comedy from './components/Comedy';
@@ -14,38 +13,6 @@ import Disaster from './components/Disaster';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 class App extends Component {
-  state = {
-    sounds: [
-        {id: 1, soundName: 'wow', soundSource: 'https://freesound.org/apiv2/sounds/48183/download', isClicked: false, sound:null},
-        {id: 2, soundName: 'hey', soundSource: 'https://freesound.org/apiv2/sounds/30989/download', isClicked: false, sound: null}
-    ]
-  }
-
-  playSound = (id) =>{
-
-      let audio = this.state.sounds.find(snd =>{
-        return snd.id === id;
-      });
-
-      if (audio.isClicked){
-        audio.sound.pause();
-        console.log("PAUSE");
-      }
-      
-      audio.sound = new Audio(audio.soundSource);
-      audio.isClicked = true;
-
-      let soundArray = this.state.sounds;
-      let index = soundArray.indexOf(audio);
-
-      soundArray[index] = audio;
-      
-      this.setState({sounds: soundArray});
-      
-      console.log(audio.soundName + " is currently playing")
-      audio.sound.play();
-      
-  }
 
   render(){
     return (
@@ -65,8 +32,6 @@ class App extends Component {
             <Route path='/videogames' component={Videogames} />
             <Route path='/traffic' component={Traffic} />
             <Route path='/disaster' component={Disaster} />
-
-            <Board sounds={this.state.sounds} playSound={this.playSound}/>
           </Switch>
         </div>
       </BrowserRouter>

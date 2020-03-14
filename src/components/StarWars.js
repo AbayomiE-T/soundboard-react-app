@@ -1,14 +1,25 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import Board from './Board';
+import { connect } from 'react-redux'
+import { playSound } from '../actions/playSound'
 
 class StarWars extends Component{
-    state = {
-        sounds: []
-    }
-    
+
     render(){
-        return(<p>You are in the star wars page.</p>)
+        return(<Board sounds={this.props.sounds} playSound={this.props.playSound}/>)
     }
 }
 
-export default StarWars
+const mapStateToProps = (state) => {
+    return {
+      sounds: state.sounds
+    }
+  }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+      playSound: (id) => dispatch(playSound(id))
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(StarWars)
