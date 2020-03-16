@@ -3,7 +3,7 @@ import "firebase/auth";
 import "firebase/firestore";
 
 const firebaseConfig = {
-    //apiKey: "AIzaSyD-d5-nyn1cmGU2IDzlC5LxTTObYcWAP8Y",
+    
     apiKey: "XXXXXxxxxxxxxXXX",
     authDomain: "soundboard-react-app.firebaseapp.com",
     databaseURL: "https://soundboard-react-app.firebaseio.com",
