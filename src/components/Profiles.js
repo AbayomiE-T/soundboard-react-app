@@ -6,7 +6,7 @@ const Profiles = () =>{
         <div className= "profile-routes">
             <p>Select a sound profile:</p>
             <ul className="profiles">
-                <li><Link to= "/star-wars">Star Wars</Link></li>
+                <li><Link to= "/sci-fi">Sci-Fi</Link></li>
                 <li><Link to= "/memes">Memes</Link></li>
                 <li><Link to= "/comedy">Comedy</Link></li>
                 <li><Link to= "/animals">Animals</Link></li>

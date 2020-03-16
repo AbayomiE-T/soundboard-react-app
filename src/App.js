@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Profiles from './components/Profiles';
-import StarWars from './components/StarWars';
+import Scifi from './components/Scifi';
 import Memes from './components/Memes';
 import Comedy from './components/Comedy';
 import Animals from './components/Animals';
@@ -22,7 +22,7 @@ class App extends Component {
           <p>Welcome to my soundboard!</p>
           <Profiles/>
           <Switch>
-            <Route path='/star-wars' component={StarWars} />
+            <Route path='/sci-fi' component={Scifi} />
             <Route path='/memes' component={Memes} />
             <Route path='/comedy' component={Comedy} />
             <Route path='/animals' component={Animals} />
