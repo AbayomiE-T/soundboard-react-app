@@ -1,5 +1,3 @@
-
-
 const soundReducer = (state={}, action) =>{
     //console.log("YOOOO")
     if (action.type === 'PLAY_SOUND'){

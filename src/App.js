@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import Profiles from './components/Profiles';
 import Scifi from './components/Scifi';
-import Memes from './components/Memes';
-import Comedy from './components/Comedy';
 import Animals from './components/Animals';
-import School from './components/School';
+import Bells from './components/Bells';
+import BodilySounds from './components/BodilySounds';
+import Clocks from './components/Clocks';
 import Construction from './components/Construction';
 import Office from './components/Office';
-import Videogames from './components/Videogames';
-import Traffic from './components/Traffic';
-import Disaster from './components/Disaster';
+import Kitchen from './components/Kitchen';
+import MusicInstruments from './components/MusicInstruments';
+import War from './components/War';
 import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -22,16 +22,16 @@ class App extends Component {
           <p>Welcome to my soundboard!</p>
           <Profiles/>
           <Switch>
-            <Route path='/sci-fi' component={Scifi} />
-            <Route path='/memes' component={Memes} />
-            <Route path='/comedy' component={Comedy} />
+            <Route path='/scifi' component={Scifi} />
+            <Route path='/bodily-sounds' component={BodilySounds} />
+            <Route path='/bells' component={Bells} />
             <Route path='/animals' component={Animals} />
-            <Route path='/school' component={School} />
+            <Route path='/clocks' component={Clocks} />
             <Route path='/construction' component={Construction} />
             <Route path='/office' component={Office} />
-            <Route path='/videogames' component={Videogames} />
-            <Route path='/traffic' component={Traffic} />
-            <Route path='/disaster' component={Disaster} />
+            <Route path='/kitchen' component={Kitchen} />
+            <Route path='/music-instruments' component={MusicInstruments} />
+            <Route path='/war' component={War} />
           </Switch>
         </div>
       </BrowserRouter>

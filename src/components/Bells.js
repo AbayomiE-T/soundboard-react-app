@@ -3,19 +3,19 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { playConstruction } from '../actions/playConstruction'
+import { playBells } from '../actions/playBells'
 import {addSoundAction} from '../actions/addSoundAction'
 import AddSound from './AddSound'
 
-class Construction extends Component{
+class Bells extends Component{
     render(){
         //console.log(this.props)
         const sounds = this.props.sounds;
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playConstruction}/>
-                  <AddSound createSound={this.props.addSoundAction} collectionName="construction"/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playBells}/>
+                  <AddSound createSound={this.props.addSoundAction} collectionName="bells"/>
                 </div>
             )
         }
@@ -32,14 +32,14 @@ class Construction extends Component{
   const mapStateToProps = (state, ownProps) => {
   
       return {
-        sounds: state.firestore.ordered.construction || null
+        sounds: state.firestore.ordered.bells || null
         
       }
     }
   
   const mapDispatchToProps = (dispatch) => {
       return {
-        playConstruction: (id) => dispatch(playConstruction(id)),
+        playBells: (id) => dispatch(playBells(id)),
         addSoundAction: (newSound, collectionName) => dispatch(addSoundAction(newSound, collectionName))
       }
     }
@@ -47,6 +47,8 @@ class Construction extends Component{
     export default compose(
       connect(mapStateToProps,mapDispatchToProps),
       firestoreConnect([
-        { collection: 'construction' }
+        { collection: 'bells' }
       ])
-    )(Construction)
+    )(Bells)
+
+//export default Bells

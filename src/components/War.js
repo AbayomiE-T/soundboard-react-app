@@ -3,21 +3,27 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { playTraffic } from '../actions/playTraffic'
+import { playWar } from '../actions/playWar'
+import {addSoundAction} from '../actions/addSoundAction'
+import AddSound from './AddSound'
 
-class Traffic extends Component{
+class War extends Component{
     render(){
         //console.log(this.props)
         const sounds = this.props.sounds;
   
         if (sounds){
-          return(<Board sounds={this.props.sounds} playSound={this.props.playTraffic}/>)
+          return(<div>
+                  <Board sounds={this.props.sounds} playSound={this.props.playWar}/>
+                  <AddSound createSound={this.props.addSoundAction} collectionName="war"/>
+                </div>
+            )
         }
   
         else{
           return(
             <div className="container center">
-            <p>Loading project...</p>
+            <p>Loading sounds...</p>
           </div>
           )
         }
@@ -27,20 +33,22 @@ class Traffic extends Component{
   const mapStateToProps = (state, ownProps) => {
   
       return {
-        sounds: state.firestore.ordered.traffic || null
+        sounds: state.firestore.ordered.war || null
         
       }
     }
   
   const mapDispatchToProps = (dispatch) => {
       return {
-        playTraffic: (id) => dispatch(playTraffic(id))
+        playWar: (id) => dispatch(playWar(id)),
+        addSoundAction: (newSound, collectionName) => dispatch(addSoundAction(newSound, collectionName))
+
       }
     }
   
     export default compose(
       connect(mapStateToProps,mapDispatchToProps),
       firestoreConnect([
-        { collection: 'traffic' }
+        { collection: 'war' }
       ])
-    )(Traffic)
+    )(War)
