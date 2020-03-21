@@ -14,7 +14,7 @@ class War extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playWar}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playWar} profileName = "War"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="war"/>
                 </div>
             )

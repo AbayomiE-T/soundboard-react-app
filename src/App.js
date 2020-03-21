@@ -18,8 +18,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <h1>My first react app</h1>
-          <p>Welcome to my soundboard!</p>
           <Profiles/>
           <Switch>
             <Route path='/scifi' component={Scifi} />

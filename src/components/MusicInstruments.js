@@ -14,7 +14,7 @@ class MusicInstruments extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playMusic}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playMusic} profileName = "Music Instruments"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="musicInstruments"/>
                 </div>
             )

@@ -16,7 +16,7 @@ class Scifi extends Component{
 
       if (sounds){
         return(<div>
-                <Board sounds={this.props.sounds} playSound={this.props.playScifi}/>
+                <Board sounds={this.props.sounds} playSound={this.props.playScifi} profileName = "Scifi"/>
                 <AddSound createSound={this.props.addSoundAction} collectionName="scifi"/>
               </div>
           )

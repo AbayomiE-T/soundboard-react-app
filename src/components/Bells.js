@@ -14,7 +14,7 @@ class Bells extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playBells}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playBells} profileName = "Bells"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="bells"/>
                 </div>
             )

@@ -14,7 +14,7 @@ class Construction extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playConstruction}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playConstruction} profileName = "Construction"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="construction"/>
                 </div>
             )

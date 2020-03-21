@@ -14,7 +14,7 @@ class Clocks extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playClocks}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playClocks} profileName = "Clocks"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="clocks"/>
                 </div>
             )

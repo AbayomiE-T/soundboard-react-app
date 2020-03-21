@@ -14,7 +14,7 @@ class BodilySounds extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playBodilySounds}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playBodilySounds} profileName = "Bodily sounds"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="bodilySounds"/>
                 </div>
             )

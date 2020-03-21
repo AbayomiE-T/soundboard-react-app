@@ -14,7 +14,7 @@ class Kitchen extends Component{
   
         if (sounds){
           return(<div>
-                  <Board sounds={this.props.sounds} playSound={this.props.playKitchen}/>
+                  <Board sounds={this.props.sounds} playSound={this.props.playKitchen} profileName = "Kitchen"/>
                   <AddSound createSound={this.props.addSoundAction} collectionName="kitchen"/>
                 </div>
             )
