@@ -1,5 +1,5 @@
 export const addSoundAction = (sound, collectionName) => {
-    return (dispatch, getState, {getFirestore}) => {
+    return (dispatch, getState, {getFirestore, getFirebase}) => {
       const firestore = getFirestore();
 
       firestore.collection(collectionName).add({

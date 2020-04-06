@@ -4,7 +4,7 @@ const Board = ({sounds, playSound, profileName}) =>{
 
       const soundList = sounds.map(sound =>{
         return(
-          <div className="container" key={sound.id}>
+          <div key={sound.id}>
             <button className="btn" onClick={() => playSound(sound.id)}>{sound.soundName}</button>
          </div>
         )
@@ -13,7 +13,9 @@ const Board = ({sounds, playSound, profileName}) =>{
       return(
         <div className="sound-list">
           <h3>Welcome to the {profileName} page</h3>
-          {soundList}
+            <div className="btn-container">
+              {soundList}
+            </div>
         </div>
       )
     }

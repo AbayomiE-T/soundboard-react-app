@@ -18,3 +18,28 @@ nav ul li ul{
   position: absolute;
 
 }
+
+.btn-container{
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  grid-template-rows: 110px 110px 110px;
+  padding: 2px;
+  background-color: rgba(0,0,0,0.87);
+}
+
+.btn-container div{
+  margin: auto;
+  padding: 2px;
+  display:grid;
+}
+
+.btn-container div button{
+  margin:auto;
+  font-size: 24px;
+  background-color: #ee6e73;
+  display: grid;
+  padding: 40px;
+  width: 300px;
+}
