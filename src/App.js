@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import Profiles from './components/Profiles';
 import Scifi from './components/Scifi';
 import Animals from './components/Animals';
@@ -10,7 +11,6 @@ import Office from './components/Office';
 import Kitchen from './components/Kitchen';
 import MusicInstruments from './components/MusicInstruments';
 import War from './components/War';
-import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 class App extends Component {
 

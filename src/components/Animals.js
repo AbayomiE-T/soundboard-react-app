@@ -50,4 +50,3 @@ class Animals extends Component{
         { collection: 'animals' }
       ])
     )(Animals)
-//export default Animals

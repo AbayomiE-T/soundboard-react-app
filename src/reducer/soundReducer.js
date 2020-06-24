@@ -1,7 +1,6 @@
 const soundReducer = (state={}, action) =>{
-    //console.log("YOOOO")
+
     if (action.type === 'PLAY_SOUND'){
-        //console.log(action.data)
 
         let audio = action.data;
 
