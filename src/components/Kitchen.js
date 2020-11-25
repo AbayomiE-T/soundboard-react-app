@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { playKitchen } from '../actions/soundActions'
-import { addSoundAction } from '../actions/addSoundAction'
-import AddSound from './AddSound'
 
 class Kitchen extends Component {
   render() {
@@ -15,7 +13,6 @@ class Kitchen extends Component {
     if (sounds) {
       return (<div>
         <Board sounds={this.props.sounds} playSound={this.props.playKitchen} profileName="Kitchen" />
-        <AddSound createSound={this.props.addSoundAction} collectionName="kitchen" />
       </div>
       )
     }
@@ -39,8 +36,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    playKitchen: (id) => dispatch(playKitchen(id)),
-    addSoundAction: (newSound, collectionName) => dispatch(addSoundAction(newSound, collectionName))
+    playKitchen: (id) => dispatch(playKitchen(id))
   }
 }
 

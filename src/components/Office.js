@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { playOffice } from '../actions/soundActions'
-import { addSoundAction } from '../actions/addSoundAction'
-import AddSound from './AddSound'
 
 class Office extends Component {
   render() {
@@ -15,7 +13,6 @@ class Office extends Component {
     if (sounds) {
       return (<div>
         <Board sounds={this.props.sounds} playSound={this.props.playOffice} profileName="Office" />
-        <AddSound createSound={this.props.addSoundAction} collectionName="office" />
       </div>
       )
     }
@@ -39,8 +36,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    playOffice: (id) => dispatch(playOffice(id)),
-    addSoundAction: (newSound, collectionName) => dispatch(addSoundAction(newSound, collectionName))
+    playOffice: (id) => dispatch(playOffice(id))
   }
 }
 

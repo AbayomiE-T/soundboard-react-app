@@ -4,8 +4,6 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { playScifi } from '../actions/soundActions'
-import { addSoundAction } from '../actions/addSoundAction'
-import AddSound from './AddSound'
 
 class Scifi extends Component {
 
@@ -17,7 +15,6 @@ class Scifi extends Component {
     if (sounds) {
       return (<div>
         <Board sounds={this.props.sounds} playSound={this.props.playScifi} profileName="Scifi" />
-        <AddSound createSound={this.props.addSoundAction} collectionName="scifi" />
       </div>
       )
     }
@@ -41,8 +38,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    playScifi: (id) => dispatch(playScifi(id)),
-    addSoundAction: (newSound, collectionName) => dispatch(addSoundAction(newSound, collectionName))
+    playScifi: (id) => dispatch(playScifi(id))
   }
 }
 
