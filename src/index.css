@@ -12,6 +12,10 @@ body {
   margin: 0px;
 }
 
+p{
+text-align: center;
+}
+
 ul{
   margin-top: 50px;
   margin-bottom: 50px;
