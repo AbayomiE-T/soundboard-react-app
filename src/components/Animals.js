@@ -11,7 +11,7 @@ class Animals extends Component {
     const sounds = this.props.sounds;
 
     if (sounds) {
-      return (<div>
+      return (<div className="board">
         <Board sounds={this.props.sounds} playSound={this.props.playAnimals} profileName="Animals" />
       </div>
       )
