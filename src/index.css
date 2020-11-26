@@ -12,13 +12,45 @@ body {
   margin: 0px;
 }
 
+ul{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 0px;
+}
+
+.profiles{
+  display: flex;
+  flex-wrap: wrap;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li{
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+  height: 50px;
+}
+
+.profile-link{
+  width: 20%;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 .sound-list{
   display: flex;
   width: 75%;
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid;
 }
 
 .btn-container{
@@ -48,16 +80,39 @@ button{
 
 }
 
+h1{
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 button:focus{
   outline: none;
 }
 
 @media only screen and (max-width: 600px) {
-  /* .sound-list{
-    justify-content: center;
-  } */
-
   .btn-container{
     width: 100%;
+  }
+
+  .profile-link{
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .btn-container{
+    width: 100%;
+  }
+
+  .profile-link{
+    width: 50%;
+  }
+
+  h1{
+    font-size: 1.5em;
   }
 }

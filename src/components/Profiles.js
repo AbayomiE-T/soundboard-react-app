@@ -1,22 +1,22 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
-const Profiles = () =>{
+const Profiles = () => {
     return (
-        <div className= "profile-routes">
-            <h1>Profiles</h1>
+        <div className="profile-routes">
+            <h1>Pick a sound profile from below and enjoy some sweet tunes.</h1>
             <nav>
                 <ul className="profiles">
-                    <li><Link className= "black-text" to= "/animals">Animals</Link></li>
-                    <li><Link className= "black-text" to= "/bells">Bells</Link></li>
-                    <li><Link className= "black-text" to= "/bodily-sounds">Bodily sounds</Link></li>
-                    <li><Link className= "black-text" to= "/clocks">Clocks</Link></li>
-                    <li><Link className= "black-text" to= "/construction">Construction</Link></li>
-                    <li><Link className= "black-text" to= "/kitchen">Kitchen</Link></li>
-                    <li><Link className= "black-text" to= "/music-instruments">Music instruments</Link></li>
-                    <li><Link className= "black-text" to= "/office">Office</Link></li>
-                    <li><Link className= "black-text" to= "/scifi">Scifi</Link></li>
-                    <li><Link className= "black-text" to= "/war">War</Link></li>
+                    <li className="profile-link"><Link to="/animals">Animals</Link></li>
+                    <li className="profile-link"><Link to="/bells">Bells</Link></li>
+                    <li className="profile-link"><Link to="/bodily-sounds">Bodily sounds</Link></li>
+                    <li className="profile-link"><Link to="/clocks">Clocks</Link></li>
+                    <li className="profile-link"><Link to="/construction">Construction</Link></li>
+                    <li className="profile-link"><Link to="/kitchen">Kitchen</Link></li>
+                    <li className="profile-link"><Link to="/music-instruments">Music Instruments</Link></li>
+                    <li className="profile-link"><Link to="/office">Office</Link></li>
+                    <li className="profile-link"><Link to="/scifi">Scifi</Link></li>
+                    <li className="profile-link"><Link to="/war">War</Link></li>
                 </ul>
             </nav>
         </div>
