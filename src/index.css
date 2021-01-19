@@ -1,110 +1,62 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  height: 100vh;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 *{
   margin: 0px;
-}
-
-p{
-text-align: center;
-}
-
-h1{
-  text-align: center;
-}
-
-h3{
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-ul{
-  margin-top: 50px;
-  margin-bottom: 50px;
   padding: 0px;
 }
 
-.profiles{
-  display: flex;
-  flex-wrap: wrap;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
+.App{
+  background-color: #482ff7;
+  min-height: 100vh;
+  padding-bottom: 40px;
 }
 
-li{
-  position: relative;
-  list-style-type: none;
+.App > h1{
+  color: white;
   text-align: center;
-  height: 50px;
+  padding-top: 32px;
 }
 
-.profile-link{
-  width: 20%;
+.App > p{
+  color: white;
+  text-align: center;
+  padding-top: 32px;
+}
+
+
+nav{
+  margin-top: 32px;
 }
 
 a{
   text-decoration: none;
-  color: inherit;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
 }
-.sound-list{
+
+.links{
+  display: grid;
+  margin: auto;
+  justify-content: center;
+  gap: 32px;
+  grid-template-columns: repeat(5, 100px);
+  grid-auto-rows: 100px; 
+}
+
+.profile-link{
+  border: 2px solid white;
+  border-radius: 50%;
   display: flex;
-  width: 75%;
-  flex-wrap: wrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.btn-container{
-  position: relative;
-  width: 20%;
-  height: 200px;
-  background-color: black;
-}
-
-.btn-container:nth-of-type(even){
-  background-color: rgb(3, 252, 157);
-}
-
-button{
-  border: none;
-  background-color: inherit;
+  justify-content: center;
+  align-items: center;
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  font-size: 1em;
 }
 
-button:focus{
-  outline: none;
-}
-
-.bg-image{
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  z-index: 3;
+.size{
+  font-size: 3rem;
 }
 
 @media only screen and (max-width: 600px) {
