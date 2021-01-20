@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { playOffice } from '../actions/soundActions'
+import office from '../album covers/office.jpg'
 
 class Office extends Component {
   render() {
@@ -11,7 +12,19 @@ class Office extends Component {
     const sounds = this.props.sounds;
 
     if (sounds) {
-      return (<div>
+      return (<div className="board">
+        <div className="album-cover">
+          <div className="image">
+            <img src={office} alt="" />
+          </div>
+          <div className="description">
+            <div>
+              <span>ALBUM</span>
+              <h1>OFFICE</h1>
+              <p>{this.props.sounds.length} songs</p>
+            </div>
+          </div>
+        </div>
         <Board sounds={this.props.sounds} playSound={this.props.playOffice} profileName="Office" />
       </div>
       )

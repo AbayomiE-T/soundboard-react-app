@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
 import { playScifi } from '../actions/soundActions'
+import scifi from '../album covers/sci-fi.jpg'
 
 class Scifi extends Component {
 
@@ -13,7 +14,19 @@ class Scifi extends Component {
     const sounds = this.props.sounds;
 
     if (sounds) {
-      return (<div>
+      return (<div className="board">
+        <div className="album-cover">
+          <div className="image">
+            <img src={scifi} alt="" />
+          </div>
+          <div className="description">
+            <div>
+              <span>ALBUM</span>
+              <h1>SCI-FI</h1>
+              <p>{this.props.sounds.length} songs</p>
+            </div>
+          </div>
+        </div>
         <Board sounds={this.props.sounds} playSound={this.props.playScifi} profileName="Scifi" />
       </div>
       )

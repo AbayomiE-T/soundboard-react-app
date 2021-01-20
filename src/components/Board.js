@@ -4,16 +4,21 @@ const Board = ({ sounds, playSound, profileName }) => {
 
   const soundList = sounds.map(sound => {
     return (
-      <div className="btn-container" key={sound.id}>
-        <button className="btn" onClick={() => playSound(sound.id)}>{sound.soundName}</button>
+      <div onClick={() => playSound(sound.id)} className="song" key={sound.id}>
+        <span>{sound.soundName}</span>
+        <div>
+          <i className='fas fa-play'></i>
+        </div>
       </div>
     )
   })
 
   return (
     <>
-      <h3>Welcome to the {profileName} page</h3>
-      <div className="sound-list">
+      <div className="track-list">
+        <div class="song">
+          <h1>TITLE</h1>
+        </div>
         {soundList}
       </div>
     </>

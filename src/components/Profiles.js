@@ -8,19 +8,6 @@ const Profiles = () => {
             <p>Please select a sound profile from below</p>
 
             <nav>
-                {/* <ul className="profiles">
-                    <li className="profile-link"><Link to="/animals">Animals</Link></li>
-                    <li className="profile-link"><Link to="/bells">Bells</Link></li>
-                    <li className="profile-link"><Link to="/bodily-sounds">Bodily sounds</Link></li>
-                    <li className="profile-link"><Link to="/clocks">Clocks</Link></li>
-                    <li className="profile-link"><Link to="/construction">Construction</Link></li>
-                    <li className="profile-link"><Link to="/kitchen">Kitchen</Link></li>
-                    <li className="profile-link"><Link to="/music-instruments">Music Instruments</Link></li>
-                    <li className="profile-link"><Link to="/office">Office</Link></li>
-                    <li className="profile-link"><Link to="/scifi">Scifi</Link></li>
-                    <li className="profile-link"><Link to="/war">War</Link></li>
-                </ul> */}
-
                 <div className="links">
                     <Link to="/animals" className="profile-link">
                         <i className='size fas fa-cat'></i>
