@@ -54,6 +54,26 @@ nav{
   color: white;
 }
 
+.profile-link:hover{
+  background-color: white;
+  transition: all 0.25s ease-out 0.1s;
+}
+
+@keyframes test{
+  from {transform: scale(0.8,0.8)}
+  to {transform: scale(1,1)}
+}
+
+.profile-link:focus{
+  animation-name: test;
+  animation-duration: 0.5s;
+}
+
+.profile-link:hover > i{
+  color: #482ff7;
+  transition: all 0.125s ease-out 0.1s;
+}
+
 .size{
   font-size: 3rem;
 }
@@ -124,7 +144,11 @@ img{
   justify-content: center;
 }
 
-.song i{
+.song div:hover{
+  cursor: pointer;
+}
+
+.song i.fa-play{
   transform: translateX(10%);
 }
 

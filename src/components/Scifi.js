@@ -33,9 +33,8 @@ class Scifi extends Component {
     }
 
     else {
-      return (<div className="container center">
-        <p>Loading sounds...</p>
-      </div>
+      return (
+        <p style={{ textAlign: 'çenter', color: 'white' }}>Loading sounds...</p>
       )
     }
   }

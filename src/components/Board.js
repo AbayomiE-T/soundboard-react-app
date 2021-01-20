@@ -1,22 +1,21 @@
 import React from 'react';
+import Button from './Button';
 
-const Board = ({ sounds, playSound, profileName }) => {
+const Board = ({ sounds, playSound }) => {
 
   const soundList = sounds.map(sound => {
     return (
-      <div onClick={() => playSound(sound.id)} className="song" key={sound.id}>
-        <span>{sound.soundName}</span>
-        <div>
-          <i className='fas fa-play'></i>
-        </div>
-      </div>
+      <Button soundName={sound.soundName}
+        playSound={playSound}
+        id={sound.id}
+        key={sound.id} />
     )
   })
 
   return (
     <>
       <div className="track-list">
-        <div class="song">
+        <div className="song">
           <h1>TITLE</h1>
         </div>
         {soundList}

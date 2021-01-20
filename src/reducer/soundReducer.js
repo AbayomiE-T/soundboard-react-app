@@ -1,6 +1,6 @@
-const soundReducer = (state={}, action) =>{
+const soundReducer = (state = {}, action) => {
 
-    if (action.type === 'PLAY_SOUND'){
+    if (action.type === 'PLAY_SOUND') {
 
         let audio = action.data;
 
@@ -8,12 +8,12 @@ const soundReducer = (state={}, action) =>{
         audio.isClicked = true;
 
         audio.sound.play();
-    
-          return{
-              audio
-          }
+
+        return {
+            audio
+        }
     }
-    else if (action.type === 'ERR'){
+    else if (action.type === 'ERR') {
         console.log("There appears to be an error")
     }
     return state

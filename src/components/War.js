@@ -32,9 +32,7 @@ class War extends Component {
 
     else {
       return (
-        <div className="container center">
-          <p>Loading sounds...</p>
-        </div>
+        <p style={{ textAlign: 'çenter', color: 'white' }}>Loading sounds...</p>
       )
     }
   }

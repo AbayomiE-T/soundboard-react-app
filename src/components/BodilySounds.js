@@ -31,16 +31,14 @@ class BodilySounds extends Component {
     }
 
     else {
-      return (<div className="container center">
-        <p>Loading sounds...</p>
-      </div>
+      return (
+        <p style={{ textAlign: 'çenter', color: 'white' }}>Loading sounds...</p>
       )
     }
   }
 }
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state.firestore)
   return {
     sounds: state.firestore.ordered.bodilySounds || null
 
