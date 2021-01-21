@@ -1,13 +1,12 @@
 import React from 'react';
 import Button from './Button';
 
-const Board = ({ sounds, playSound }) => {
+const Board = ({ sounds }) => {
 
   const soundList = sounds.map(sound => {
     return (
       <Button soundName={sound.soundName}
-        playSound={playSound}
-        id={sound.id}
+        source={sound.soundSource}
         key={sound.id} />
     )
   })

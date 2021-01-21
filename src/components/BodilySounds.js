@@ -3,7 +3,6 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { playBodilySounds } from '../actions/soundActions'
 import people from '../album covers/people.jpg'
 
 class BodilySounds extends Component {
@@ -25,7 +24,7 @@ class BodilySounds extends Component {
             </div>
           </div>
         </div>
-        <Board sounds={this.props.sounds} playSound={this.props.playBodilySounds} profileName="Bodily sounds" />
+        <Board sounds={this.props.sounds} />
       </div>
       )
     }
@@ -45,14 +44,8 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    playBodilySounds: (id) => dispatch(playBodilySounds(id))
-  }
-}
-
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
   firestoreConnect([
     { collection: 'bodilySounds' }
   ])

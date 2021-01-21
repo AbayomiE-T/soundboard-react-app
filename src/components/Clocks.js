@@ -3,7 +3,6 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { playClocks } from '../actions/soundActions'
 import clocks from '../album covers/clocks.jpg'
 
 class Clocks extends Component {
@@ -25,7 +24,7 @@ class Clocks extends Component {
             </div>
           </div>
         </div>
-        <Board sounds={this.props.sounds} playSound={this.props.playClocks} profileName="Clocks" />
+        <Board sounds={this.props.sounds} />
       </div>
       )
     }
@@ -46,14 +45,8 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    playClocks: (id) => dispatch(playClocks(id))
-  }
-}
-
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
   firestoreConnect([
     { collection: 'clocks' }
   ])

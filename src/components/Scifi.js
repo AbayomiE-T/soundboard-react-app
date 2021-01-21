@@ -3,7 +3,6 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { playScifi } from '../actions/soundActions'
 import scifi from '../album covers/sci-fi.jpg'
 
 class Scifi extends Component {
@@ -27,7 +26,7 @@ class Scifi extends Component {
             </div>
           </div>
         </div>
-        <Board sounds={this.props.sounds} playSound={this.props.playScifi} profileName="Scifi" />
+        <Board sounds={this.props.sounds} />
       </div>
       )
     }
@@ -48,17 +47,9 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    playScifi: (id) => dispatch(playScifi(id))
-  }
-}
-
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
   firestoreConnect([
     { collection: 'scifi' }
   ])
 )(Scifi)
-
-  //export default connect(mapStateToProps, mapDispatchToProps)(StarWars)

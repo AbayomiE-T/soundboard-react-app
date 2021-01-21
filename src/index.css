@@ -16,6 +16,10 @@ body {
   padding-bottom: 40px;
 }
 
+audio{
+  display: none;
+}
+
 a{
   text-decoration: none;
 }

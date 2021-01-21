@@ -3,7 +3,6 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import { playOffice } from '../actions/soundActions'
 import office from '../album covers/office.jpg'
 
 class Office extends Component {
@@ -25,7 +24,7 @@ class Office extends Component {
             </div>
           </div>
         </div>
-        <Board sounds={this.props.sounds} playSound={this.props.playOffice} profileName="Office" />
+        <Board sounds={this.props.sounds} />
       </div>
       )
     }
@@ -46,14 +45,8 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    playOffice: (id) => dispatch(playOffice(id))
-  }
-}
-
 export default compose(
-  connect(mapStateToProps, mapDispatchToProps),
+  connect(mapStateToProps),
   firestoreConnect([
     { collection: 'office' }
   ])
