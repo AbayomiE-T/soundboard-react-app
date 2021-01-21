@@ -3,7 +3,7 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import farm from '../album covers/farm.jpeg'
+import farm from '../album covers/farm.jpg'
 
 class Animals extends Component {
   render() {

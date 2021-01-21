@@ -3,7 +3,7 @@ import Board from './Board';
 import { connect } from 'react-redux'
 import { firestoreConnect } from 'react-redux-firebase'
 import { compose } from 'redux'
-import bells from '../album covers/bell.jpeg'
+import bells from '../album covers/bell.jpg'
 
 class Bells extends Component {
   render() {
